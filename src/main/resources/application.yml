@@ -1,0 +1,28 @@
+#server:
+#  address: localhost
+#  port: 8080
+#spring:
+#  thymeleaf:
+#    prefix: classpath:templates/
+#
+#    suffix: .html
+#    cache: false
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://svc.sel3.cloudtype.app:30118/ecuzodb
+    username: root
+    password: 1234
+
+  jpa:
+#    database-platform: org.hibernate.dialect.MariaDB53Dialect #5.6 version
+    database-platform: org.hibernate.dialect.MariaDB102Dialect  #10.5 version
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: create
+    properties:
+      hibernate.format_sql: true
+
+
